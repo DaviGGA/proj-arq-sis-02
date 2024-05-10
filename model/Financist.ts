@@ -14,4 +14,9 @@ export class Financist extends Employee {
         return this.salary * 0.20;
     }
 
+    getRole(): string {
+        return "Financist"
+    }
+
+
 }

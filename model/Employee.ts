@@ -25,6 +25,8 @@ export abstract class Employee {
 
     abstract getBonus(): number;
 
+    abstract getRole(): string
+
     getSalary() {
         return this.salary;
     }
@@ -34,7 +36,7 @@ export abstract class Employee {
     }
 
     getSeniority() {
-        
+        return this.seniority;
     }
 
 
