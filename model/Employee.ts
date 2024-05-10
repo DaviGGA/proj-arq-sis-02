@@ -1,12 +1,13 @@
 
-
-export class Employee {
-    private goalReached: boolean
+export abstract class Employee {
+    protected goalReached: boolean
 
     constructor(
-        private name: string,
-        private cpf: string,
-        private salary: number
+        protected name: string,
+        protected cpf: string,
+        protected salary: number,
+        protected seniority: string
+
     ) {
         if (!name) throw new Error("Invalid error");
         if(!cpf) throw new Error("Invalid cpf");
@@ -22,10 +23,7 @@ export class Employee {
         return this.cpf;
     }
 
-    getBonus() {
-        if (this.goalReached) return this.salary * 0.1;
-        return 0;
-    }
+    abstract getBonus(): number;
 
     getSalary() {
         return this.salary;
@@ -33,6 +31,10 @@ export class Employee {
 
     getFullSalary() {
         return this.salary + this.getBonus();
+    }
+
+    getSeniority() {
+        
     }
 
 

@@ -9,8 +9,12 @@ export class EmployeeRepository {
         this.employees = [];
     }
 
-    createEmployee(employee: Employee) {
+    async createEmployee(employee: Employee) {
         this.employees.push(employee);
+    }
+
+    async getEmployees() {
+        return this.employees;
     }
 
 }
