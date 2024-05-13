@@ -1,4 +1,3 @@
-import { Seniority } from "../enums/Seniority"
 import { EmployeeFactory } from "../factories/EmployeeFactory"
 import { Employee } from "../model/Employee"
 import { EmployeeRepository } from "../repository/employee-repository"
@@ -7,7 +6,7 @@ type Input = {
     name: string,
     cpf: string,
     salary: number,
-    seniority: Seniority,
+    seniority: string,
     employeeType: string
 }
 

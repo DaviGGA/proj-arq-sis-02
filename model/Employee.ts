@@ -39,5 +39,9 @@ export abstract class Employee {
         return this.seniority;
     }
 
+    setGoalReached() {
+        this.goalReached = true;
+    }
+
 
 }
