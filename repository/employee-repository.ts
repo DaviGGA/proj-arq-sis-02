@@ -1,25 +1,22 @@
 import { Employee } from "../model/Employee";
 
+const employees: Employee[] = []
 
 export class EmployeeRepository {
 
-    employees: Employee[];
-
-    constructor () {
-        this.employees = [];
-    }
+    constructor () {}
 
     async createEmployee(employee: Employee) {
-        this.employees.push(employee);
+        employees.push(employee);
     }
 
     async getEmployees() {
-        return this.employees;
+        return employees;
     }
 
     async setGoalReachedByCPF(cpf: string) {
-        const employeeIndex = this.employees.findIndex( e => e.getCpf() == cpf);
-        this.employees[employeeIndex].setGoalReached();
+        const employeeIndex = employees.findIndex( e => e.getCpf() == cpf);
+        employees[employeeIndex].setGoalReached();
     }
 
 }
